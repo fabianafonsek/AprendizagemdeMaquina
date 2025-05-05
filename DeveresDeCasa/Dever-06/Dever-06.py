@@ -1,6 +1,7 @@
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn import metrics
 
 # 1. Carregar os dados
 iris = load_iris()
@@ -33,6 +34,10 @@ try:
     # 6. Imprimir o nome da flor
     especie_predita = nomes_especies[predicao[0]]
     print(f"\nA flor é da espécie: {especie_predita}")
+
+    # 7. Verificando taxa de acerto
+    acertos = metrics.accuracy_score(y_test, modelo.predict(X_test))
+    print(f"\nAcurácia do modelo nos dados de teste: {acertos:.2f}")
 
 except ValueError:
     print("Por favor, digite apenas números válidos para as medidas.")

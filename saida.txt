@@ -1,0 +1,4 @@
+Quantidade total de itens na amostra de teste: 90
+setosa: 30
+versicolor: 30
+virginica: 30
